@@ -1,0 +1,42 @@
+{
+  "name": "pri-request",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "pri test",
+    "prepublishOnly": "npm run build && npm run bundle --skipLint",
+    "start": "pri dev",
+    "docs": "pri docs",
+    "build": "pri build",
+    "bundle": "pri bundle",
+    "preview": "pri preview",
+    "analyse": "pri analyse",
+    "format": "eslint --fix './?(src|docs|tests)/**/*.?(ts|tsx)'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prijs/pri-request.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prijs/pri-request/issues"
+  },
+  "homepage": "https://github.com/prijs/pri-request#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "axios": "^0.18.0",
+    "query-string": "^6.5.0"
+  },
+  "devDependencies": {
+    "pri": "^3.0.8"
+  },
+  "peerDependencies": {},
+  "types": "src/index.tsx",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
+}
